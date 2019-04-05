@@ -12,12 +12,16 @@ package ec.edu.ups.clases;
  * @see http://ups.edu.ec
  */
 
-public class Estudiante {
-private String estudiante;   
-    public void setEstudiante(String estudiante){
-      this.estudiante=estudiante;  
+public class Estudiante extends Persona {
+private Carrera carrera; 
+
+public Estudiante(){
+    
+}
+    public void setCarrera(Carrera carrera){
+      this.carrera=carrera;  
     }
-    public String getEstudiante(){
-        return this.estudiante;
+    public Carrera getCarrera(){
+        return this.carrera;
     }
 }
