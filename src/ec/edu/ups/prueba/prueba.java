@@ -5,9 +5,6 @@
  */
 
 
-//https://github.com/VinicioCabrera/Sistemacalificaciones.git
-
-
 package ec.edu.ups.prueba;
 import ec.edu.ups.clases.Carrera;
 import ec.edu.ups.clases.Estudiante;
@@ -17,7 +14,6 @@ import ec.edu.ups.clases.Materia;
 import ec.edu.ups.clases.Persona;
 import ec.edu.ups.clases.Profesor;
 import ec.edu.ups.clases.Sede;
-import java.util.ArrayList;
 /**
  *
  * @author Usuario
@@ -25,120 +21,88 @@ import java.util.ArrayList;
 public class prueba {
  public static void main(String[] args){
      
-     Carrera c=new Carrera();  
-     c.setCodigo(1002);
-     c.setNombre("Computacion");
-     c.setNumeroEstudiantes(20);
-     c.setNumeroSemestre(3);
-     c.setTitulo("Ingeniero en ciencias de la computacion");
-     int caCo=c.getCodigo();
-     String caNom=c.getNombre();
-     int caNuEs=c.getNumeroEstudiantes();
-     int caNuSe=c.getNumeroSemestre();
-     String caTi=c.getTitulo();
-     System.out.println("Codigo: "+caCo);
-     System.out.println("Nombre: "+caNom);
-     System.out.println("Numero de estudiante: "+caNuEs);
-     System.out.println("Numero del semestre: "+caNuSe);
-     System.out.println("Titulo: "+caTi);
+     Sede sedeCuenca=new Sede( 1,"sedeCuenca","calleVieja 12-30","2587596");
+     Carrera computacion=new Carrera(1,"computacion",10,45,"Igenieria computacion");
+     Carrera telematica=new Carrera(2,"telematica",11,44,"Igenieria telematica");
+     Carrera mecatronica=new Carrera(3,"Mecatrinica",9,43,"Igenieria Mecatronica");
      
-     Estudiante es=new Estudiante();
-     es.setEstudiante("juan calle");
-     String esEs=es.getEstudiante();
-     System.out.println("Estudiante: "+esEs);
+   
+     Materia materia1=new Materia(11,"programacion",6,248,3);
+      Materia materia2=new Materia(11,"ecuanciones",6,248,3);
+       Materia materia3=new Materia(11,"estructura",6,248,3);
+        Materia materia4=new Materia(11,"matematicas",6,248,3);
+         Materia materia5=new Materia(11,"Etica",6,248,3);
+          Materia materia6=new Materia(11,"programacion",6,248,3);
+          
+          
+        
+        
+       
+        Profesor jenifer=new Profesor("ing en sistemas", 2000, "docente", 0, "Jenifer Yepez", "0215406512", "023115632", "racar", "anafkjfn");
+        Profesor paola=new Profesor("ing en sistemas", 2103, "docente", 2, "Paola Ingavelez", "0102175151", "02015120518", "baños", "bbdabdkjand");
+        
+        Estudiante Pablo=new Estudiante(1, "Pablo", "0107377020", "096874", "Ricaurte", "pab@hotmail.com");
+        Estudiante Juan=new Estudiante(2, "Juan", "056156165", "26262662", "sidcay", "jumcioaefnia");
+        Estudiante Maria=new Estudiante(3, "Maria", "0101472052", "20125151", "El valle", "mari1@hotail.com|");
+        Estudiante Luis=new Estudiante(4, "Luis", "01258415", "2013481", "Sinincay", "Lujnisvn skjv");
+        
+        Grupo uno=new Grupo(1, "ciencias exactas", 40);
+        Grupo dos=new Grupo(2, "profesional", 40);
+        
+        //HistorialCalificaciones historial=new HistorialCalificaciones( "algebra", 20, 8, 10, 20, "pablo");
+        
      
-     Grupo gru=new Grupo();
-     gru.setCodigo(1020);
-     gru.setNombre("Programacion Aplicada");
-     gru.setCupo(12);
-     int gCo=gru.getCodigo();
-     String gNo=gru.getNombre();
-     int gCu=gru.getCupo();
-     System.out.println("Codigo: "+gCo);
-     System.out.println("Nombre: "+gNo);
-     System.out.println("Cupo: "+gCu);
-     
-     Profesor pro=new Profesor();
-     pro.setCargo("Gefe de Area");
-     pro.setSalario(900.12);
-     pro.setTitulo("Ingeniero");
-     String pCa=pro.getCargo();
-     double pSa=pro.getSalario();
-     String pTi=pro.getTitulo();
-     System.out.println("Cargo: "+pCa);
-     System.out.println("Salario: "+pSa);
-     System.out.println("Titulo: "+pTi);
-     
-     Persona pe=new Persona();
-     pe.setCedula("0105826987");
-     pe.setCodigo(20154);
-     pe.setCorreo("Juan_12@hotmail.com");
-     pe.setDireccion("AV.benigno malo");
-     pe.setNombre("juan");
-     pe.setTelefono("4058489");
-     String peCed=pe.getCedula();
-     int peCod=pe.getCodigo();
-     String peCorr=pe.getCorreo();
-     String peDire=pe.getDireccion();
-     String peNo=pe.getNombre();
-     String peTelf=pe.getTelefono();
-     System.out.println("Cedila: "+peCed);
-     System.out.println("Codigo: "+peCod);
-     System.out.println("Correo: "+peCorr);
-     System.out.println("Direccion: "+peDire);
-     System.out.println("Nombre: "+peNo);
-     System.out.println("Telefono: "+peTelf);
-     /*ArrayList<String>sde;
-     sde=new ArrayList<String>();
-     sde.add();
-     for (int i=0;i<sde.size();i++){
-       System.out.println(sde.get(i));  
-     }*/
-     
-     Sede se=new Sede();
-     se.setCodigo(20154);
-     se.setDireccion("AV.benigno malo");
-     se.setNombre("juan");
-     se.setTelefono("4058489");
-     int seCod=pe.getCodigo();
-     String seDire=pe.getDireccion();
-     String seNo=pe.getNombre();
-     String seTelf=pe.getTelefono();
-     System.out.println("Codigo: "+seCod);
-     System.out.println("Direccion: "+seDire);
-     System.out.println("Nombre: "+seNo);
-     System.out.println("Telefono: "+seTelf);
-     
-     Materia ma=new Materia();
-     ma.setCodigo(2154);
-     ma.setNumeroCreditos(6);
-     ma.setNombre("juan");
-     ma.setNumeroHoras(248);
-     ma.setNivel(3);
-     int maCod=ma.getCodigo();
-     int maNuCe=ma.getNumeroCreditos();
-     String maNo=ma.getNombre();
-     int maNuHo=ma.getNumeroHoras();
-     int maNi=ma.getNivel();
-     System.out.println("Codigo: "+maCod);
-     System.out.println("Numero de creditos: "+maNuCe);
-     System.out.println("Nombre: "+maNo);
-     System.out.println("Numero de horas: "+maNuHo);
-     System.out.println("Nivel: "+maNi);
-     
-     HistorialCalificaciones hica=new HistorialCalificaciones();
-     hica.setAprovechamiento1(9);
-     hica.setAprovechamiento2(10);
-     hica.setExamen1(12);
-     hica.setExamen2(11);
-     int hicaApro1=hica.getAprovechamiento1();
-     int hicaApro2=hica.getAprovechamiento2();
-     int hicaExa1=hica.getExamen1();
-     int hicaExa2=hica.getExamen2();
-     System.out.println("Aprovechamiento1: "+hicaApro1);
-     System.out.println("Aprovechamiento2: "+hicaApro2);
-     System.out.println("Examen1: "+hicaExa1);
-     System.out.println("Examen2: "+hicaExa2);
- }  
+        sedeCuenca.agregarCarrera(materia5);
+        sedeCuenca.agregarCarrera(materia4);
+        sedeCuenca.agregarCarrera(materia6);
+        
+        materia1.agregarMateria(materia1);
+        materia2.agregarMateria(materia2);
+        materia3.agregarMateria(materia3);
+        materia4.agregarMateria(materia4);
+        materia5.agregarMateria(materia5);
+        materia6.agregarMateria(materia6);
+        
+        materia1.setGrupo(uno);
+        materia2.setGrupo(uno);
+        materia3.setGrupo(uno);
+        materia4.setGrupo(dos);
+        materia5.setGrupo(dos);
+        materia6.setGrupo(dos);
+        
+        materia1.setProfesor(paola);
+        materia2.setProfesor(paola);
+        materia3.setProfesor(paola);
+        materia4.setProfesor(jenifer);
+        materia5.setProfesor(jenifer);
+        materia6.setProfesor(jenifer);
+        
+
+        
+        //System.out.println(sedeCuenca);
+        //sedeCuenca.imprimir();
+        
+        System.out.println("computacion");
+        System.out.println(computacion);
+        computacion.imprimir();
+       
+        System.out.println("telematica");
+        System.out.println(telematica);
+        materia4.imprimir();
+        
+        System.out.println("mecatronica");
+        System.out.println(mecatronica);
+        materia6.imprimir();
+        
+   
+        System.out.println(materia1);
+        System.out.println(materia2);
+        System.out.println(materia3);
+        System.out.println(materia4);
+        System.out.println(materia5);
+        System.out.println(materia6);
+ } 
      
 }
+
+
